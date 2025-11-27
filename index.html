@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文蹴之道 - 民族体育数字化传承平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.cn/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>文蹴之道</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#features">核心功能</a></li>
+                <li><a href="#simulator">战术模拟</a></li>
+                <li><a href="#culture">文化传承</a></li>
+                <li><a href="#about">关于我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">文蹴之道</h1>
+            <p class="hero-subtitle">古法新蹴，触屏可及</p>
+            <p class="hero-desc">用现代科技，激活千年蹴球的生命力</p>
+            <button class="cta-button" onclick="scrollToSection('simulator')">即刻体验</button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- 痛点分析 -->
+    <section id="pain-points" class="section dark">
+        <div class="container">
+            <h2 class="section-title">当古老智慧遇上数字时代</h2>
+            <div class="pain-points-grid">
+                <div class="pain-point">
+                    <div class="point-icon">❌</div>
+                    <h3>规则复杂难懂</h3>
+                    <p>蹴球规则抽象复杂，仅凭文字描述难以理解，让初学者望而却步</p>
+                </div>
+                <div class="pain-point">
+                    <div class="point-icon">🏟️</div>
+                    <h3>教学依赖实地</h3>
+                    <p>传统教学需要专用场地和专业教练，限制了传播的广度与效率</p>
+                </div>
+                <div class="pain-point">
+                    <div class="point-icon">📱</div>
+                    <h3>形式陈旧单一</h3>
+                    <p>现有传播方式缺乏互动性，难以吸引年轻一代的关注和参与</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心功能 -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">我们的解决方案</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>规则可视化学习</h3>
+                    <p>通过交互动画和图形化展示，将复杂规则转化为直观易懂的学习体验</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🧩</div>
+                    <h3>战术交互推演</h3>
+                    <p>在虚拟场地上自由推演战术，实时模拟碰撞结果，深化战术理解</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <h3>智能学习助手</h3>
+                    <p>个性化学习路径推荐，即时解答疑问，让学习更高效有趣</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 战术模拟器 -->
+    <section id="simulator" class="section dark">
+        <div class="container">
+            <h2 class="section-title">战术模拟推演</h2>
+            <div class="simulator-container">
+                <div class="simulator-controls">
+                    <h3>推演控制</h3>
+                    <div class="control-group">
+                        <button onclick="resetBalls()">重置位置</button>
+                        <button onclick="simulateCollision()">模拟碰撞</button>
+                        <button onclick="showRules()">查看规则</button>
+                    </div>
+                    <div class="rules-panel" id="rulesPanel">
+                        <h4>蹴球基本规则</h4>
+                        <ul>
+                            <li>• 场地为10m×10m正方形</li>
+                            <li>• 红蓝双方轮流蹴球</li>
+                            <li>• 击中对方球得1分</li>
+                            <li>• 将球蹴出界外判犯规</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="simulator-canvas">
+                    <canvas id="gameCanvas" width="400" height="400"></canvas>
+                    <div class="canvas-overlay">
+                        <p>拖拽红球或蓝球进行战术推演</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文化传承 -->
+    <section id="culture" class="section">
+        <div class="container">
+            <h2 class="section-title">穿越千年的体育活化石</h2>
+            <div class="culture-content">
+                <div class="culture-text">
+                    <p>蹴球，源自中国古代的蹴鞠，是中华民族体育文化中一颗璀璨的明珠。它不仅是力量的较量，更是智慧与技巧的博弈，蕴含着"发必中、中必胜"的哲学思想。</p>
+                    <p>我们深入挖掘其历史文化，将其融入到平台的每一个细节之中，让你在互动体验里，感受中华优秀传统文化的博大精深。</p>
+                </div>
+                <div class="culture-visual">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">战国</div>
+                            <div class="timeline-desc">蹴鞠起源</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">唐宋</div>
+                            <div class="timeline-desc">发展鼎盛</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">现代</div>
+                            <div class="timeline-desc">民族体育</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队介绍 -->
+    <section id="about" class="section dark">
+        <div class="container">
+            <h2 class="section-title">黄金三角，跨界融合</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">📝</div>
+                    <h3>XXX</h3>
+                    <p class="member-role">编辑出版学 & 网页设计</p>
+                    <p class="member-desc">负责项目的整体视觉叙事与用户体验设计，确保科技产品同样拥有温暖的文化内核。</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">💻</div>
+                    <h3>XXX</h3>
+                    <p class="member-role">计算机科学与技术</p>
+                    <p class="member-desc">攻克技术难关，将创新的想法通过代码变为稳定、流畅的交互现实。</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">🏃</div>
+                    <h3>XXX</h3>
+                    <p class="member-role">体育教育</p>
+                    <p class="member-desc">作为项目的专业基石，确保从规则到动作的每一个细节都精准、权威。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 文蹴之道 - 民族体育数字化传承平台</p>
+            <p>联系我们: example@email.com | 项目指导: 云南民族大学体育学院</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
